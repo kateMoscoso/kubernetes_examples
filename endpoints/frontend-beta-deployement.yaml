@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: frontend-beta
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: guestbook
+        tier: frontend
+        beta: guestbook
+    spec:
+      containers:
+      - name: guestbook
+        image: javsalgar/guestbook-beta
+        ports:
+          - name: http-server
+            containerPort: 3000

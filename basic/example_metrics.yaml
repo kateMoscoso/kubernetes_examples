@@ -1,0 +1,8 @@
+apiVersion: v1 # API object group where the object belongs to
+kind: Pod            # Type of API Object
+metadata:           # Object metadata
+  name: dokuwiki
+spec:               # (Optional) Specification of the object properties
+  containers:
+    - image: bitnami/dokuwiki
+      name: dokuwiki
